@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>b学上的值不值 · 测算版</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <div class="container">
+    <div class="form-page">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">这b学上的值不值<span class="version">·测算版 v1.0</span></h1>
+      <p class="subtitle"></p>
+    </header>
+
+    <!-- Tug of War Bar -->
+    <div class="tug-bar" id="tugBar">
+      <div class="tug-track">
+        <div class="tug-fill" id="tugFill"></div>
+      </div>
+      <div class="tug-labels">
+        <span class="tug-label-left">📚 重心在校 <strong id="tugLeftPct">50%</strong></span>
+        <span class="tug-label-right"><strong id="tugRightPct">50%</strong> 重心实习 💼</span>
+      </div>
+    </div>
+
+    <!-- Section 1: 硬件基盘 -->
+    <section class="section">
+      <h2 class="section-title">一、出身与硬件基盘</h2>
+
+      <div class="form-group">
+        <label class="label">学校层级 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="school">
+          <button class="radio-btn" data-value="10">清北/华五</button>
+          <button class="radio-btn" data-value="8.5">中等985</button>
+          <button class="radio-btn" data-value="7">末流985/强势211</button>
+          <button class="radio-btn" data-value="5.5">普通211</button>
+          <button class="radio-btn" data-value="4">双一流(非211)</button>
+          <button class="radio-btn" data-value="3.5">强势双非(深大/杭电)</button>
+          <button class="radio-btn" data-value="2">普通双非</button>
+          <button class="radio-btn" data-value="0.5">民办/专科</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">专业类别 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="major">
+          <button class="radio-btn" data-value="1.0">计算机/金融/量化</button>
+          <button class="radio-btn" data-value="0.8">电子/通信/自动化</button>
+          <button class="radio-btn" data-value="0.5">传统工科(机械/土木/化工)</button>
+          <button class="radio-btn" data-value="0.5">理学(数学/物理等)</button>
+          <button class="radio-btn" data-value="0.35">管理/经济/法学</button>
+          <button class="radio-btn" data-value="0.15">文科/社科/艺术</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">所在城市等级 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="city">
+          <button class="radio-btn" data-value="10">北上广深</button>
+          <button class="radio-btn" data-value="7.5">新一线(杭州/成都/南京等)</button>
+          <button class="radio-btn" data-value="5">省会城市</button>
+          <button class="radio-btn" data-value="2.5">普通地级市</button>
+          <button class="radio-btn" data-value="1">偏远/非省会城市</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">校区区位 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="location">
+          <button class="radio-btn" data-value="10">市中心/地铁直达商务区</button>
+          <button class="radio-btn" data-value="7">城区校区，公交1h内到CBD</button>
+          <button class="radio-btn" data-value="4">近郊大学城，通勤1.5h+</button>
+          <button class="radio-btn" data-value="1">远郊/偏远校区，去市区要2h+</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: 校内资源 -->
+    <section class="section">
+      <h2 class="section-title">二、校内资源供给</h2>
+
+      <div class="form-group">
+        <label class="label">老师产业连接度 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="teacher">
+          <button class="radio-btn" data-value="10">能直接内推实习/有业界资源</button>
+          <button class="radio-btn" data-value="5">偶尔能推荐机会</button>
+          <button class="radio-btn" data-value="0">纯学术派，无业界关系</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">校招直通车质量 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="recruit">
+          <button class="radio-btn" data-value="10">大厂给免笔试/直通车名额</button>
+          <button class="radio-btn" data-value="5">有正规宣讲会，正常投递</button>
+          <button class="radio-btn" data-value="0">走过场/几乎没有校招</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">校友网络活跃度 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="alumni">
+          <button class="radio-btn" data-value="10">校友群天天发内推码</button>
+          <button class="radio-btn" data-value="5">偶尔有校友帮忙</button>
+          <button class="radio-btn" data-value="0">死群/无校友网络</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">课程辅导资源 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="tutor">
+          <button class="radio-btn" data-value="10">免费辅导+mentor制度</button>
+          <button class="radio-btn" data-value="5">有，但质量一般</button>
+          <button class="radio-btn" data-value="0">基本没有</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">师生比 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="ratio">
+          <button class="radio-btn" data-value="10">< 15:1 (小班教学)</button>
+          <button class="radio-btn" data-value="5">~25:1 (正常)</button>
+          <button class="radio-btn" data-value="0">> 50:1 (大水漫灌)</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">校内活动/竞赛知名度 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="activity">
+          <button class="radio-btn" data-value="10">企业赞助竞赛/知名活动</button>
+          <button class="radio-btn" data-value="5">偶尔有像样的活动</button>
+          <button class="radio-btn" data-value="0">几乎没有/纯凑数</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">GTA/RA等校内岗位 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="gra">
+          <button class="radio-btn" data-value="10">轻松拿到，含金量高</button>
+          <button class="radio-btn" data-value="5">需要竞争，有一定价值</button>
+          <button class="radio-btn" data-value="0">卷破头也没啥用</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: 行政通融度 -->
+    <section class="section">
+      <h2 class="section-title">三、行政通融度与沉没成本</h2>
+
+      <div class="form-group">
+        <label class="label">考勤严格度 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="attend">
+          <button class="radio-btn" data-value="10">基本不点名，随便翘</button>
+          <button class="radio-btn" data-value="5">偶尔点名，能请假</button>
+          <button class="radio-btn" data-value="0">每节课签到/人脸识别</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">实习与学分置换 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="credit">
+          <button class="radio-btn" data-value="10">大厂实习可抵学分</button>
+          <button class="radio-btn" data-value="5">需要走审批流程</button>
+          <button class="radio-btn" data-value="0">不允许/只能去指定工厂实习</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">请假放人难度 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="leave">
+          <button class="radio-btn" data-value="10">辅导员秒批长假</button>
+          <button class="radio-btn" data-value="5">需要走流程但能批</button>
+          <button class="radio-btn" data-value="0">死活不放人</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">GPA评定难度 <span class="hint">?</span></label>
+        <div class="radio-group" data-key="gpa">
+          <button class="radio-btn" data-value="10">给分宽松，不卷</button>
+          <button class="radio-btn" data-value="5">正常水平</button>
+          <button class="radio-btn" data-value="0">压分严重，卷到飞起</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Submit -->
+    <button class="submit-btn" id="submitBtn" onclick="calculate()">查看我的大学诊断报告</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p></p>
+    </footer>
+    </div><!-- /.form-page -->
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
